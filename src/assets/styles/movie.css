@@ -44,3 +44,30 @@
 .movie:hover .movieDesc {
   transform: translateY(0%);
 }
+
+.nav.nav-tabs {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  list-style-type: none;
+  border: 0.13em solid #032541;
+  border-radius: 20px;
+  padding: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+.nav-link {
+  text-decoration: none;
+  color: #032541;
+}
+.nav-tabs.active {
+  background: black;
+}
+
+.nav-link.active {
+  background: #032541;
+  padding: 10px;
+  border-radius: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
