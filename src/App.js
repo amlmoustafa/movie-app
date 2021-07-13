@@ -1,5 +1,5 @@
 import "./App.css";
-import BackgroundImage from "./Components/bgImage/BackgroundImage";
+import BackgroundImage from "./Components/BgCoverImage/BackgroundImage";
 import TopMovies from "./Components/Movies/TopMovies";
 import Navbar from "./Components/Navbar/Navbar";
 
