@@ -1,5 +1,7 @@
 import React from "react";
+import NowPlayingMovies from "../Movies/NowPlayingMovies";
 import TopMovies from "../Movies/TopMovies";
+import UpcomingMovies from "../Movies/UpcomingMovies";
 import Tabs from "./Tabs";
 
 const tabContent = [
@@ -9,11 +11,11 @@ const tabContent = [
   },
   {
     title: "Upcoming Movies",
-    content: <TopMovies />,
+    content: <UpcomingMovies />,
   },
   {
     title: "Now Playing Movies",
-    content: <TopMovies />,
+    content: <NowPlayingMovies />,
   },
 ];
 
