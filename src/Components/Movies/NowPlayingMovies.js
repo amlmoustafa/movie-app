@@ -11,7 +11,6 @@ const NowPlayingMovies = () => {
     fetch(topMoviesAPI)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setMovies(data.results);
       });
   }, []);

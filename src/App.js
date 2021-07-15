@@ -1,6 +1,7 @@
 import "./App.css";
 import BackgroundImage from "./Components/BgCoverImage/BackgroundImage";
 import Navbar from "./Components/Navbar/Navbar";
+import SearchMovies from "./Components/Search/SearchMovies";
 import ToggleTabs from "./Components/ToggleTabs/ToggleTabs";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Navbar />
       <BackgroundImage />
+      <SearchMovies />
       <ToggleTabs />
     </div>
   );

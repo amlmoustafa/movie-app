@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import NowPlayingMovies from "../Movies/NowPlayingMovies";
 import TopMovies from "../Movies/TopMovies";
 import UpcomingMovies from "../Movies/UpcomingMovies";
@@ -21,16 +21,13 @@ const tabContent = [
 
 const ToggleTabs = () => {
   return (
-    <>
+    <Fragment>
       <div className="row">
         <div className="col text-center">
           <div className="row text-left">
             <Tabs>
-              {tabContent.map((tab, idx) => (
-                <Tabs.TabPane
-                  key={`ToggleMovies-${idx}`}
-                  tab={tab.title}
-                >
+              {tabContent.map((tab, index) => (
+                <Tabs.TabPane key={`ToggleMovies-${index}`} tab={tab.title}>
                   {tab.content}
                 </Tabs.TabPane>
               ))}
@@ -38,7 +35,7 @@ const ToggleTabs = () => {
           </div>
         </div>
       </div>
-    </>
+    </Fragment>
   );
 };
 
