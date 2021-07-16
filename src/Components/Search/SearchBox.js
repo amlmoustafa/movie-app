@@ -1,8 +1,12 @@
 import React from "react";
+import { useHistory } from 'react-router';
 
 const SearchBox = (props) => {
-  const handleSubmit = () => {
+  const history = useHistory();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     console.log("press search");
+    return history.push(`/searchResults?query=${props.searchValue}`);
   };
 
   return (
