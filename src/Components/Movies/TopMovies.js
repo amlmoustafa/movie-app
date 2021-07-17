@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from "react";
+import { topMoviesAPI } from "../../API/moviesAPI";
+import LoadingCircle from "../../LoadingCircle";
 import AddFavorites from "../AddFavorites";
 import Movie from "./Movie";
-
-const topMoviesAPI =
-  "https://api.themoviedb.org/3/movie/top_rated?api_key=05bf7152120094ea9bcc5b4b4366831b";
 
 const TopMovies = () => {
   const [movies, setMovies] = useState();
   const [favorites, setFavorites] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch(topMoviesAPI)
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, []);
 
@@ -27,6 +31,9 @@ const TopMovies = () => {
     saveToLocalStorage(newFavoriteList);
   };
 
+  if (isLoading) {
+    return <LoadingCircle />;
+  }
   return (
     <div className="movie-container">
       {movies?.length > 0 &&
