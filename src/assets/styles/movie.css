@@ -71,3 +71,16 @@
   color: #ffffff;
   font-weight: bold;
 }
+
+.addToFavBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 1rem;
+  font-size: 11px;
+  cursor: pointer;
+}
+.addToFavBtn img {
+  width: 20px;
+  height: 20px;
+}

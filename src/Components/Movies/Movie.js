@@ -2,18 +2,23 @@ import React from "react";
 import "../../assets/styles/movie.css";
 
 const imgAPI = "https://image.tmdb.org/t/p/w1280/";
-const Movie = ({ title, poster_path, overview, vote_average }) => {
+
+const Movie = ({ movie, handleFavoritesClick, favoriteComponent }) => {
+  const FavoriteComponent = favoriteComponent;
   return (
     <div className="movie">
-      <img src={imgAPI + poster_path} alt={title} />
+      <img src={imgAPI + movie.poster_path} alt={movie.title} />
       <div className="movieInfo">
-        <h3>{title}</h3>
-        <span>{vote_average}</span>
+        <h3>{movie.title}</h3>
+        <span>{movie.vote_average}</span>
       </div>
-      <div className="movieDesc">
+      <div onClick={() => handleFavoritesClick(movie)}>
+        <FavoriteComponent />
+      </div>
+      {/* <div className="movieDesc">
         <h2>Overview:</h2>
         <p>{overview}</p>
-      </div>
+      </div> */}
     </div>
   );
 };
