@@ -26,6 +26,7 @@ const TopMovies = () => {
     setFavorites(newFavoriteList);
     saveToLocalStorage(newFavoriteList);
   };
+
   return (
     <div className="movie-container">
       {movies?.length > 0 &&
