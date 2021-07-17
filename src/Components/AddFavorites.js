@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/styles/movie.css";
 import addToFavIcon from "../assets/images/heart.png";
 
 const AddFavorites = () => {
+  const [addToFavorite, setAddToFavorite] = useState("Add to Favorite");
   return (
     <div className="add-to-fav-btn">
-      <span>Add to Favorites</span>
+      <span
+        onClick={() => {
+          setAddToFavorite("Added");
+        }}
+      >
+        {addToFavorite}
+      </span>
       <img src={addToFavIcon} alt="heart" />
     </div>
   );
