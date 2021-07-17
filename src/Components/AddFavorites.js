@@ -4,7 +4,7 @@ import addToFavIcon from "../assets/images/heart.png";
 
 const AddFavorites = () => {
   return (
-    <div className="addToFavBtn">
+    <div className="add-to-fav-btn">
       <span>Add to Favorites</span>
       <img src={addToFavIcon} alt="heart" />
     </div>

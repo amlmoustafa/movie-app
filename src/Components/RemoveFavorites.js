@@ -4,7 +4,7 @@ import removeFavIcon from "../assets/images/remove.png";
 
 const RemoveFavorites = () => {
   return (
-    <div className="addToFavBtn">
+    <div className="add-to-fav-btn">
       <span>Remove from Favorites</span>
       <img src={removeFavIcon} alt="heart" />
     </div>

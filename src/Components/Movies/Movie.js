@@ -8,17 +8,17 @@ const Movie = ({ movie, handleFavoritesClick, favoriteComponent }) => {
   return (
     <div className="movie">
       <img src={imgAPI + movie.poster_path} alt={movie.title} />
-      <div className="movieInfo">
+      <div className="movie-info">
         <h3>{movie.title}</h3>
         <span>{movie.vote_average}</span>
+      </div>
+      <div className="movie-overview">
+        <h2>Overview:</h2>
+        <p>{movie.overview}</p>
       </div>
       <div onClick={() => handleFavoritesClick(movie)}>
         <FavoriteComponent />
       </div>
-      {/* <div className="movieDesc">
-        <h2>Overview:</h2>
-        <p>{overview}</p>
-      </div> */}
     </div>
   );
 };

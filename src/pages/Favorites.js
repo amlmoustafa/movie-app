@@ -19,7 +19,7 @@ const Favorites = () => {
     setFavorites(newFavoriteList);
   };
   return (
-    <div className="movieContainer">
+    <div className="movie-container">
       {favorites?.length > 0 &&
         favorites.map((favoriteMovie) => (
           <Movie

@@ -1,0 +1,36 @@
+.search-form-container {
+  margin-top: 15px;
+}
+.search-form-container input[type="text"] {
+  width: 90%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 0.7em;
+  color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+input:focus {
+  outline: none;
+}
+.search-form {
+  position: relative;
+}
+.search-form-container input[type="submit"] {
+  height: 35px;
+  padding: 10px 26px;
+  border: none;
+  border-radius: 30px;
+  position: absolute;
+  right: 40px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(3, 37, 65, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}

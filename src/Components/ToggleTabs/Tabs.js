@@ -19,7 +19,7 @@ const Tabs = ({ children, active = 0 }) => {
   }, [children]);
 
   return (
-    <div className="w-100">
+    <div className="tabs-container">
       <ul className="nav nav-tabs">
         {tabsData.map(({ tab }, index) => (
           <li className="nav-items">

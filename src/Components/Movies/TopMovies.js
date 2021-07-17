@@ -27,7 +27,7 @@ const TopMovies = () => {
     saveToLocalStorage(newFavoriteList);
   };
   return (
-    <div className="movieContainer">
+    <div className="movie-container">
       {movies?.length > 0 &&
         movies.map((movie) => (
           <Movie
